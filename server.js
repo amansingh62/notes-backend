@@ -24,7 +24,7 @@ app.use('/auth', require('./Routes/authRoutes'));
 app.use('/auth/notes', require('./Routes/noteRoutes'));
 
 if (process.env.NODE_ENV === "production") {
-  const frontendPath = path.join(__dirname, '../notes/frontend/dist');
+  const frontendPath = path.join(__dirname, '../frontend/dist');
   app.use(express.static(frontendPath));
 
   app.get('*', (req, res) => {
